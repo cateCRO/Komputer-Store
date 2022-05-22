@@ -16,71 +16,58 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="app.js"></script>
   </head>
   <body>
-    <div class="container border">
-      <div class="row">
-        <div class="column">
+    <div class="container">
+      <div class="row m-1">
+        <div class="col border m-1">
           <h3>Joe Banker</h3>
           <span>Balance: </span>
           <span id="balance"></span>
           <br />
           <span class="invisible">Outstanding loan: </span>
-          <span id="loan" class="invisible"></span><br />
-          <!-- Button trigger modal -->
+          <span id="outstandingloan" class="invisible"></span><br />
           <button
             type="button"
-            class="btn btn-secondary"
-            data-bs-toggle="modal"
-            data-bs-target="#getloan"
+            class="btn btn-info"
+            id="loansum"
+            onclick="promptMe()"
           >
-            Get a loan
+            Get a Loan
           </button>
-
-          <!-- Modal -->
-          <div
-            class="modal fade"
-            id="getloan"
-            tabindex="-1"
-            aria-labelledby="getloanLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="getloanLabel">
-                    Write the loan amount
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <input
-                    type="text"
-                    class="form-control"
-                    aria-label="Loan amount"
-                    aria-describedby="inputGroup-sizing-sm"
-                  />
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">
-                    Ask for a loan
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="column"></div>
-        <div class="column"></div>
+        <div class="col border m-1">
+          <h3>Work</h3>
+          <span>Pay: </span>
+          <span id="pay"></span>
+          <br />
+
+          <button type="button" class="btn btn-warning" id="bankbutton">
+            Bank
+          </button>
+          <button type="button" class="btn btn-success" id="workbutton">
+            Work
+          </button>
+        </div>
+        <div class="col border m-1">
+          <h3>Laptops</h3>
+          <select class="form-select" name="computers" id="computers"></select>
+          <span id="information">information</span>
+        </div>
       </div>
-      <div class="row"></div>
+      <div class="row m-1">
+        <div class="col border m-1">
+          <span id="title">title</span>
+          <span id="image">image</span>
+          <span id="information">information</span>
+          <span id="price">price</span>
+          <button type="button" class="btn btn-dark" id="buynowbutton">
+            BUY NOW
+          </button>
+        </div>
+      </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
